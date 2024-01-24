@@ -7,8 +7,3 @@ document.getElementById('getLocation').addEventListener('click', function () {
     mapLink.classList.remove('hidden');
   });
 });
-
-// navigator.geolocation.getCurrentPosition((position) => {
-//   document.cookie = `lat=${position.coords.latitude}; path=/`;
-//   document.cookie = `lon=${position.coords.longitude}; path=/`;
-// });
