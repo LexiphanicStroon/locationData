@@ -25,5 +25,5 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.LOCATION_KEY }}
+        deploy_key: ${{ secrets.LOCATION_KEY }}
         publish_dir: ./src # Adjust if your files are in a different directory
