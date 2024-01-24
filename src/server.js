@@ -2,26 +2,6 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const express = require('express');
-const fs = require('fs');
-const app = express();
-const port = 3000;
-
-app.get('/', (req, res) => {
-  fs.readFile('src/index.html', 'utf8', (err, htmlContent) => {
-    if (err) {
-      res.status(500).send('Error loading page');
-      return;
-    }
-    const apiKey = process.env.GOOGLE_KEY; // Ensure this is set in your environment variables
-    const htmlWithKey = htmlContent.replace('apiKey', apiKey);
-    res.send(htmlWithKey);
-  });
-});
-
-
-
-
 const parseCookies = (cookieHeader) => {
   let cookies = {};
   cookieHeader && cookieHeader.split(';').forEach(cookie => {
