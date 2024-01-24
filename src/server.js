@@ -2,6 +2,13 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
+app.get('/', (req, res) => {
+  const apiKey = process.env.GOOGLE_KEY; // Ensure this is set in your environment variables
+  const htmlWithKey = yourHtmlContent.replace('YOUR_API_KEY_PLACEHOLDER', apiKey);
+  res.send(htmlWithKey);
+});
+
+
 const parseCookies = (cookieHeader) => {
   let cookies = {};
   cookieHeader && cookieHeader.split(';').forEach(cookie => {

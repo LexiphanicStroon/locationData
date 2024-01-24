@@ -20,17 +20,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="map.js"></script>
-<script>
-  function loadGoogleMaps() {
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://maps.googleapis.com/maps/api/js?key=' +
-      encodeURIComponent(process.env.GOOGLE_MAPS_API_KEY) + '&callback=initMap';
-    document.body.appendChild(script);
-  }
-
-  window.onload = loadGoogleMaps;
-</script>
-<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=MYKEY&callback=initMap"></script> -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=apiKey&callback=initMap"></script>
 </body>
 </html>
