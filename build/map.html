@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="build.css">
+  <title>Map</title>
+</head>
+<body class="bg-black text-text-50" >
+  <div class="flex justify-center items-center flex-col gap-3 my-8" >
+    <h1 class="text-7xl" id="headerOne" >Was I Close?</h1>
+    <a href="index.html" class="text-2xl hover:text-primary-500" >Take Me Home</a>
+  </div>
+<div class="flex" >
+  <div id="map" style="height: 400px; width: 100%;"></div>
+  <img src="" id="myGif" class="w-[500px] h-[400px]" alt="">
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="map.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=MYKEY&callback=initMap"></script>
+</body>
+</html>
