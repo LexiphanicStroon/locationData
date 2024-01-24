@@ -11,19 +11,8 @@ const parseCookies = (cookieHeader) => {
   return cookies;
 };
 
-const express = require('express');
-const app = express();
-const port = 3000;
+http.createServer((req, res) => {  
 
-app.get('/getApiKey', (req, res) => {
-  res.json({ key: process.env.GOOGLE_KEY });
-});
-
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
-
-http.createServer((req, res) => {
   const cookies = parseCookies(req.headers.cookie);
   if (cookies.lat && cookies.lon) {
     fs.appendFileSync('location.txt', `Latitude: ${cookies.lat}, Longitude: ${cookies.lon}\n`);

@@ -20,23 +20,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="map.js"></script>
-<script>
-  function loadGoogleMaps() {
-    fetch('/getApiKey')
-      .then(response => response.json())
-      .then(data => {
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = `https://maps.googleapis.com/maps/api/js?key=${data.key}&callback=initMap`;
-        document.body.appendChild(script);
-      })
-      .catch(error => {
-        console.error('Error fetching API key:', error);
-      });
-  }
-
-  window.onload = loadGoogleMaps;
-</script>
-<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=apiKey&callback=initMap"></script> -->
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLUyM4V8hBl971eBhiKf-1wFdKKVFV6Js&callback=initMap"></script>
 </body>
 </html>
