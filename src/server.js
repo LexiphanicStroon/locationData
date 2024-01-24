@@ -8,7 +8,7 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  fs.readFile('path/to/your/index.html', 'utf8', (err, htmlContent) => {
+  fs.readFile('src/index.html', 'utf8', (err, htmlContent) => {
     if (err) {
       res.status(500).send('Error loading page');
       return;
