@@ -20,10 +20,10 @@ jobs:
     - name: Replace API Key and Build
       run: node build.js
       env:
-        GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+        GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_KEY }}
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        deploy_key: ${{ secrets.LOCATION_KEY }}
+        deploy_key: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./src # Adjust if your files are in a different directory

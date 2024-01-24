@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const apiKey = process.env.GOOGLE_MAPS_API_KEY;
+const apiKey = process.env.GOOGLE_KEY;
 const htmlFilePath = 'src/map.html';
 
 let htmlContent = fs.readFileSync(htmlFilePath, 'utf8');
